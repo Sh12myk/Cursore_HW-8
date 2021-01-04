@@ -1,5 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 body{
-    min-width: 1100px;
+    min-width: 1328px;
     min-height: 600px;
+}
+
+.container{
+    min-width: 1328px;
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 10% 80%;
+    /*добавить gap*/
+
+}
+.sidebar{
+    background-color: black;
+}
+
+
+.slider__current-course__first__progress{
+    background-image: url("../additional_files/img/progress.png");
+    background-size: ;
+    background-repeat: no-repeat;
 }
