@@ -949,6 +949,7 @@ select{
 @media only screen and ( max-width: 1439px ) and ( min-width: 992px) {
     body {
         max-width: 1439px;
+        max-height: 100%;
         margin: 5%;
         overflow: auto;
     }
@@ -993,12 +994,44 @@ select{
     }
 
     .main {
-        grid-template-columns: 100%;
-        grid-auto-rows: 10% 100% 100%;
+        grid-template-columns: 90%;
+        grid-auto-rows: 10% 123% 115%;
+        gap: 16%;
         margin-left: 15%;
         overflow: auto;
     }
-
+    .welcome-user__text {
+        width: 70%;
+        display: grid;
+        grid-template-rows: 30% 30%;
+        margin: 0px 20px 20px 40px;
+        letter-spacing: 0;
+    }
+    .slider__current-course__first {
+        display: grid;
+        grid-template-columns: 15% 31.3% 10% 30%;
+        grid-column-gap: 2px;
+        gap: 5%;
+        background-color: #F5F5F7;
+        border-radius: 1rem;
+        height: 107%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .courses-list {
+        display: grid;
+        grid-template-areas:
+                "topic"
+                "list";
+        grid-template-rows: 25% 85%;
+        gap: 5%;
+    }
+    .courses-list__current-list {
+        display: grid;
+        grid-template-rows: repeat(5, 85px);
+        gap: 6%;
+        width: 108%;
+    }
     .welcome-user__img img {
         width: 200px;
         position: absolute;
@@ -1006,20 +1039,20 @@ select{
         bottom: 0.1em;
     }
 
-    .user-statistic-coll{
+    .user-statistic-coll {
         display: grid;
         grid-template-areas:
-        "course-statistic"
-        "time-statistic"
-        "offer";
-        grid-template-rows: 11% 60% 22%;
-        gap: 8%;
+                "course-statistic"
+                "time-statistic"
+                "offer";
+        grid-template-rows: 25% 87% 30%;
+        gap: 6%%;
     }
     .user-time-statistic__graph img{
         width: 100%;
     }
     .offer__imag img{
-        width: 50%;
+        width: 70%;
         margin: auto;
     }
 
