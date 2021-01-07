@@ -21,24 +21,28 @@
             </a>
         </div>
         <nav class="sidebar-nav">
-            <a class="sidebar__nav-link" href="#">
-                <img src="additional_files/img/home.png" alt="home ">
-            </a>
-            <a class="sidebar__nav-link" href="#">
-                <img src="additional_files/img/learn.png" alt="learn ">
-            </a>
-            <a class="sidebar__nav-link" href="#">
-                <img src="additional_files/img/user.png" alt="user ">
-            </a>
-            <a class="sidebar__nav-link" href="#">
-                <img src="additional_files/img/mail.png" alt="mail ">
-            </a>
-            <a class="sidebar__nav-link" href="#">
-                <img src="additional_files/img/setting.png" alt="setting ">
-            </a>
-            <a class="sidebar__nav-link sidebar__nav-link__exit" href="#">
-                <img src="additional_files/img/exit.png" alt="exit ">
-            </a>
+            <div class="sidebar-nav-general">
+                <a class="sidebar__nav-link" href="#">
+                    <img src="additional_files/img/home.png" alt="home ">
+                </a>
+                <a class="sidebar__nav-link" href="#">
+                    <img src="additional_files/img/learn.png" alt="learn ">
+                </a>
+                <a class="sidebar__nav-link" href="#">
+                    <img src="additional_files/img/user.png" alt="user ">
+                </a>
+                <a class="sidebar__nav-link" href="#">
+                    <img src="additional_files/img/mail.png" alt="mail ">
+                </a>
+                <a class="sidebar__nav-link" href="#">
+                    <img src="additional_files/img/setting.png" alt="setting ">
+                </a>
+            </div>
+            <div class="sidebar-nav-exit">
+                <a class="sidebar__nav-link sidebar__nav-link__exit" href="#">
+                    <img src="additional_files/img/exit.png" alt="exit ">
+                </a>
+            </div>
         </nav>
     </aside>
     <main class="main">
@@ -84,7 +88,7 @@
                 <h2>Courses</h2>
                     <div class="courses-list__sorting">
                         <ul>
-                            <li><a href="">All Courses</a></li>
+                            <li><a href="" class="courses-list__sorting-checked" >All Courses</a></li>
                             <li><a href="">The Newest</a></li>
                             <li><a href="">Top Rated</a></li>
                             <li><a href="">Most Popular</a></li>
@@ -215,7 +219,7 @@
                 <div class="user-time-statistic__sorting">
                     <div class="user-time-statistic__sorting-type">
                         <ul>
-                            <li><a href="">Learning Hours</a></li>
+                            <li><a href="" class="user-time-statistic__sorting-type__checked">Learning Hours</a></li>
                             <li><a href="">My Courses</a></li>
                         </ul>
                     </div>
