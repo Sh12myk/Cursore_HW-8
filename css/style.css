@@ -2,13 +2,20 @@
 body{
     max-height: 900px;
     max-width: 1440px;
-    overflow: hidden;
+
+
 }
+
 ul {
     list-style-type: none;
 }
 button{
     border: none;
+    outline: none;
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
 }
 h2{
 
@@ -41,10 +48,10 @@ li a{
     display: grid;
     grid-template-areas: "aside main";
     grid-template-columns: minmax(100px, 10%) minmax(83%, auto);
-    gap: 5%;
+    gap: 3%;
     justify-content: space-around;
-    margin-left: 2%;
-    margin-top: 33px;
+    height: 100vh;
+
 
 }
 .sidebar{
@@ -58,6 +65,8 @@ li a{
     align-items: center;
     box-shadow: 1.5vw 1vh 1.5vw rgba(180, 180, 180, 0.7);
     margin-top: 14%;
+    margin-left: 32px;
+
 
 }
 .sidebar__logo{
@@ -78,10 +87,18 @@ li a{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-
-
-
 }
+.sidebar-nav div a img:hover{
+    transform: rotate(720deg) scale(1.2);
+    transition: 1.2s;
+    text-shadow: 2px 2px 4px white, 0 0 2em whitesmoke, 0 0 0.3em snow;
+}
+.sidebar-nav div a img:active{
+    transform: scale(1.3);
+    text-shadow: 2px 2px 4px white, 0 0 2em whitesmoke, 0 0 0.3em snow;
+    transition: 0.2s;
+}
+
 .sidebar-nav-general{
     display: grid;
     grid-template-rows: repeat(5 , 10%) ;
@@ -92,9 +109,7 @@ li a{
 .sidebar-nav-exit{
     margin-left: 39%;
 }
-.sidebar__nav-link__exit{
 
-}
 .sidebar__nav-link{
     width: 100%;
     align-items: center;
@@ -112,6 +127,7 @@ li a{
     grid-template-columns: 52% 36%;
     grid-column-gap: 4%;
     max-height: 100vh;
+    overflow: hidden;
 }
 .courses{
     display: grid;
@@ -154,20 +170,21 @@ li a{
     width: 40%;
     position: absolute;
     height: 12em;
-    right: 0.5em;
-    bottom: 0;
+    right: 5.9em;
+    bottom: 0.1em;
 }
 .welcome-user__img img{
     width: 70%;
+    position: absolute;
+    height: 12em;
+    right: 0.5em;
+    bottom: 0;
 }
 
 .slider__current-course{
     display: grid;
     grid-template-columns: 81% 18%;
     gap: 1%;
-
-
-
 }
 
 .slider__current-course__first{
@@ -262,6 +279,19 @@ li a{
     border-radius: 0.8rem;
     margin: auto;
 }
+.button-continue:hover{
+    transform: scale(1);
+    background-color: white;
+    color: black;
+    border: black solid;
+}
+.button-continue:active{
+    transform: scale(0.8);
+    opacity: 0.9;
+    background-color: white;
+    color: black;
+    border: black solid;
+}
 .slider__current-course_slider-control{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -273,6 +303,16 @@ li a{
     border-radius: 100%;
     margin: auto;
     justify-content: center;
+
+}
+.slider__current-course_slider-control a:hover{
+    transform: scale(1);
+
+}
+.slider__current-course_slider-control a:active{
+    transform: scale(0.8);
+    opacity: 0.9;
+
 
 }
 .button__slider-control img{
@@ -374,6 +414,19 @@ li a{
     border-radius: 0.8rem;
     margin-top: 12%;
 }
+.button__course:hover{
+    transform: scale(1);
+    background-color: white;
+    color: black;
+    border: black solid;
+}
+.button__course:active{
+    transform: scale(0.8);
+    opacity: 0.9;
+    background-color: white;
+    color: black;
+    border: black solid;
+}
 
 /*Right part of main*/
 
@@ -394,6 +447,9 @@ li a{
     justify-content: space-between;
 
 }
+.mobile{
+    display: none;
+}
 .header__search input{
 
     max-width: 300px;
@@ -404,13 +460,104 @@ li a{
     border: 0;
     border-radius: 8px;
     text-indent: 45px;
+    outline: none;
 }
-.header__notification{
 
-}
 .header__notification img{
     height: 36px;
+    -webkit-animation: ring 4s .7s ease-in-out infinite;
+    -webkit-transform-origin: 50% 4px;
+    -moz-animation: ring 4s .7s ease-in-out infinite;
+    -moz-transform-origin: 50% 4px;
+    animation: ring 4s .7s ease-in-out infinite;
+    transform-origin: 50% 4px;
+    cursor: pointer;
 }
+
+@-webkit-keyframes ring {
+    0% { -webkit-transform: rotateZ(0); }
+    1% { -webkit-transform: rotateZ(30deg); }
+    3% { -webkit-transform: rotateZ(-28deg); }
+    5% { -webkit-transform: rotateZ(34deg); }
+    7% { -webkit-transform: rotateZ(-32deg); }
+    9% { -webkit-transform: rotateZ(30deg); }
+    11% { -webkit-transform: rotateZ(-28deg); }
+    13% { -webkit-transform: rotateZ(26deg); }
+    15% { -webkit-transform: rotateZ(-24deg); }
+    17% { -webkit-transform: rotateZ(22deg); }
+    19% { -webkit-transform: rotateZ(-20deg); }
+    21% { -webkit-transform: rotateZ(18deg); }
+    23% { -webkit-transform: rotateZ(-16deg); }
+    25% { -webkit-transform: rotateZ(14deg); }
+    27% { -webkit-transform: rotateZ(-12deg); }
+    29% { -webkit-transform: rotateZ(10deg); }
+    31% { -webkit-transform: rotateZ(-8deg); }
+    33% { -webkit-transform: rotateZ(6deg); }
+    35% { -webkit-transform: rotateZ(-4deg); }
+    37% { -webkit-transform: rotateZ(2deg); }
+    39% { -webkit-transform: rotateZ(-1deg); }
+    41% { -webkit-transform: rotateZ(1deg); }
+
+    43% { -webkit-transform: rotateZ(0); }
+    100% { -webkit-transform: rotateZ(0); }
+}
+
+@-moz-keyframes ring {
+    0% { -moz-transform: rotate(0); }
+    1% { -moz-transform: rotate(30deg); }
+    3% { -moz-transform: rotate(-28deg); }
+    5% { -moz-transform: rotate(34deg); }
+    7% { -moz-transform: rotate(-32deg); }
+    9% { -moz-transform: rotate(30deg); }
+    11% { -moz-transform: rotate(-28deg); }
+    13% { -moz-transform: rotate(26deg); }
+    15% { -moz-transform: rotate(-24deg); }
+    17% { -moz-transform: rotate(22deg); }
+    19% { -moz-transform: rotate(-20deg); }
+    21% { -moz-transform: rotate(18deg); }
+    23% { -moz-transform: rotate(-16deg); }
+    25% { -moz-transform: rotate(14deg); }
+    27% { -moz-transform: rotate(-12deg); }
+    29% { -moz-transform: rotate(10deg); }
+    31% { -moz-transform: rotate(-8deg); }
+    33% { -moz-transform: rotate(6deg); }
+    35% { -moz-transform: rotate(-4deg); }
+    37% { -moz-transform: rotate(2deg); }
+    39% { -moz-transform: rotate(-1deg); }
+    41% { -moz-transform: rotate(1deg); }
+
+    43% { -moz-transform: rotate(0); }
+    100% { -moz-transform: rotate(0); }
+}
+
+@keyframes ring {
+    0% { transform: rotate(0); }
+    1% { transform: rotate(30deg); }
+    3% { transform: rotate(-28deg); }
+    5% { transform: rotate(34deg); }
+    7% { transform: rotate(-32deg); }
+    9% { transform: rotate(30deg); }
+    11% { transform: rotate(-28deg); }
+    13% { transform: rotate(26deg); }
+    15% { transform: rotate(-24deg); }
+    17% { transform: rotate(22deg); }
+    19% { transform: rotate(-20deg); }
+    21% { transform: rotate(18deg); }
+    23% { transform: rotate(-16deg); }
+    25% { transform: rotate(14deg); }
+    27% { transform: rotate(-12deg); }
+    29% { transform: rotate(10deg); }
+    31% { transform: rotate(-8deg); }
+    33% { transform: rotate(6deg); }
+    35% { transform: rotate(-4deg); }
+    37% { transform: rotate(2deg); }
+    39% { transform: rotate(-1deg); }
+    41% { transform: rotate(1deg); }
+
+    43% { transform: rotate(0); }
+    100% { transform: rotate(0); }
+}
+
 .header__avatar{
     display: grid;
     grid-template-columns: 70% 20%;
@@ -522,9 +669,7 @@ select{
     line-height: 10px;
     color: #000000;
 }
-.user-time-statistic__graph{
 
-}
 .user-time-statistic__graph img{
     width: 108%;
 }
@@ -565,11 +710,368 @@ select{
     height: 2.8rem;
     background-color: #000000;
     border-radius: 0.8rem;
-    margin: auto;
+    margin: 0 auto 5px auto;
 }
-.offer__imag img{
+.offer-button:hover{
+    transform: scale(1);
+    background-color: white;
+    color: black;
+    border: black solid;
+}
+.offer-button:active{
+    transform: scale(0.8);
+    opacity: 0.9;
+    background-color: white;
+    color: black;
+    border: black solid;
+}
+
+.offer__imag img {
     width: 70%;
     margin: auto;
+}
+
+@media only screen and ( max-width: 767px){
+
+    body {
+        max-width: 767px;
+
+        margin: 0;
+        overflow: auto;
+    }
+
+    .container {
+        min-height: 640px;
+        display: grid;
+
+        grid-template-columns:  minmax(80%, auto);
+        gap: 2%;
+        justify-content: space-around;
+
+    }
+
+    .sidebar {
+        position: fixed;
+        display: grid;
+        grid-template-columns: 12% 85%;
+        grid-template-rows: 100%;
+
+        bottom: 95vh;
+        height: 5vh;
+        width: 100%;
+        margin-left: -1em;
+        z-index: 1;
+
+    }
+
+
+    .sidebar-nav {
+        display: grid;
+        grid-template-rows: 100% ;
+        grid-template-columns: 60% 20%;
+        gap: 30%;
+        margin-top: 5%;
+    }
+
+    .sidebar-nav-general {
+        display: grid;
+        grid-template-columns: repeat(5 , 32%) ;
+        grid-template-rows: 100%;
+        grid-row-gap: 6%;
+
+    }
+    .header{
+        display: grid;
+        grid-template-columns: 75% 8% 14%;
+        margin-top: 8%;
+        align-items: stretch;
+        justify-content: space-between;
+
+    }
+    .mobile{
+        display: grid;
+    }
+    .desktop{
+        display: none;
+    }
+
+    .main {
+        grid-template-columns: 100%;
+        grid-auto-rows: 10% 100% 100%;
+        margin-top: 100px;
+        overflow: auto;
+
+    }
+    .welcome-user__text{
+        line-height: 30px;
+        display: grid;
+        grid-template-rows: 55% 30%;
+    }
+    .slider__current-course__first__text p,
+    .courses-list__current-list__item-text p,
+    .courses-list__current-list__item-text h4
+    {
+        line-height: 12px;
+        margin: 0;
+    }
+    .welcome-user__img img {
+        width: 180px;
+        position: absolute;
+        right: 2.5em;
+        bottom: 0.1em;
+    }
+
+    .user-statistic-coll{
+        display: grid;
+        grid-template-areas:
+                "course-statistic"
+                "time-statistic"
+                "offer";
+        grid-template-rows: 11% 60% 22%;
+        gap: 8%;
+    }
+    .user-time-statistic__graph img{
+        width: 100%;
+    }
+    .offer__imag img{
+        width: 50%;
+        margin: auto;
+    }
+
+
+
+}
+
+@media only screen and (min-width: 768px) and ( max-width: 991px) {
+
+    body {
+        max-width: 991px;
+        min-height: 640px;
+        margin: 5% 5% 5% 5%;
+        overflow: auto;
+    }
+
+    .container {
+
+        display: grid;
+
+        grid-template-columns:  minmax(80%, auto);
+        gap: 2%;
+        justify-content: space-around;
+
+    }
+
+    .sidebar {
+        position: fixed;
+        display: grid;
+        grid-template-columns: 12% 85%;
+        grid-template-rows: 100%;
+
+        top:-9vh;
+        height: 5vh;
+        width: 100%;
+        margin-left: -1em;
+        z-index: 1;
+
+    }
+
+
+    .sidebar-nav {
+        display: grid;
+        grid-template-rows: 100% ;
+        grid-template-columns: 60% 20%;
+        gap: 30%;
+        margin-top: 5%;
+    }
+
+    .sidebar-nav-general {
+        display: grid;
+        grid-template-columns: repeat(5 , 32%) ;
+        grid-template-rows: 100%;
+        grid-row-gap: 6%;
+
+    }
+    .header{
+        display: grid;
+        grid-template-columns: 75% 8% 14%;
+        margin-top: 8%;
+        align-items: stretch;
+        justify-content: space-between;
+
+    }
+    .mobile{
+        display: grid;
+    }
+    .desktop{
+        display: none;
+    }
+
+    .main {
+        grid-template-columns: 100%;
+        grid-auto-rows: 10% 100% 100%;
+        margin-left: 5%;
+        margin-top: 100px;
+        overflow: auto;
+
+
+    }
+
+    .welcome-user__img img {
+        width: 200px;
+        position: absolute;
+        right: 2.5em;
+        bottom: 0.1em;
+    }
+
+    .user-statistic-coll{
+        display: grid;
+        grid-template-areas:
+                "course-statistic"
+                "time-statistic"
+                "offer";
+        grid-template-rows: 11% 60% 22%;
+        gap: 8%;
+    }
+    .user-time-statistic__graph img{
+        width: 100%;
+    }
+    .offer__imag img{
+        width: 50%;
+        margin: auto;
+    }
+
+
+
+}
+
+@media only screen and ( max-width: 1439px ) and ( min-width: 992px) {
+    body {
+        max-width: 1439px;
+        margin: 5%;
+        overflow: auto;
+    }
+
+    .container {
+        display: grid;
+
+        grid-template-columns:  minmax(80%, auto);
+        gap: 2%;
+        justify-content: space-around;
+
+    }
+
+    .sidebar {
+        position: fixed;
+        margin-top: 30px;
+        left: 2vh ;
+
+        bottom: 0.5vw;
+        height: 80vh;
+
+    }
+
+    .sidebar-nav {
+    }
+
+    .sidebar-nav-general {
+    }
+    .header{
+        display: grid;
+        grid-template-columns: 75% 8% 14%;
+        margin-top: 8%;
+        align-items: stretch;
+        justify-content: space-between;
+
+    }
+    .mobile{
+        display: grid;
+    }
+    .desktop{
+        display: none;
+    }
+
+    .main {
+        grid-template-columns: 100%;
+        grid-auto-rows: 10% 100% 100%;
+        margin-left: 15%;
+        overflow: auto;
+    }
+
+    .welcome-user__img img {
+        width: 200px;
+        position: absolute;
+        right: 2.5em;
+        bottom: 0.1em;
+    }
+
+    .user-statistic-coll{
+        display: grid;
+        grid-template-areas:
+        "course-statistic"
+        "time-statistic"
+        "offer";
+        grid-template-rows: 11% 60% 22%;
+        gap: 8%;
+    }
+    .user-time-statistic__graph img{
+        width: 100%;
+    }
+    .offer__imag img{
+        width: 50%;
+        margin: auto;
+    }
+
+
+
+}
+
+@media only screen and (min-width: 1450px) {
+    body {
+        max-height: 1200px;
+        max-width: 1900px;
+
+    }
+
+    .container {
+        display: grid;
+        grid-template-areas: "aside main";
+        grid-template-columns: minmax(150px, 23%) minmax(83%, auto);
+        gap: 10%;
+        justify-content: space-around;
+        margin: 2%;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar-nav {
+    }
+
+    .sidebar-nav-general {
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 52% 40%;
+        grid-column-gap: 8%;
+        max-height: 100vh;
+        overflow: auto;
+    }
+
+    .courses {
+    }
+
+
+    .welcome-user__img img {
+        width: 200px;
+        position: absolute;
+        right: 2.5em;
+        bottom: 0.1em;
+    }
+
+    .slider__current-course__first {
+    }
 }
 
 
