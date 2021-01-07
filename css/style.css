@@ -1,26 +1,490 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-body{
-    min-width: 1328px;
-    min-height: 600px;
+@font-face {
+    font-family: "Baloo Bhai 2";
+    src: url("../additional_files/fonts/Baloo_Bhai_2/BalooBhai2-Regular.ttf") format('ttf') ;
+    font-weight: normal;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../additional_files/fonts/Roboto/Roboto-Regular.ttf") format('ttf');
+}
+body{
+    max-height: 900px;
+    max-width: 1440px;
+    overflow: hidden;
+}
+ul {
+    list-style-type: none;
+}
 .container{
-    min-width: 1328px;
-    min-height: 600px;
     display: grid;
-    grid-template-columns: 10% 80%;
-    /*добавить gap*/
+    grid-template-areas: "aside main";
+    grid-template-columns: minmax(100px, 10%) minmax(83%, auto);
+    gap: 5%;
+    margin-top: 2%;
+    justify-content: space-around;
+    margin-left: 2%;
 
 }
 .sidebar{
-    background-color: black;
+    height: 95vh;
+    background-color: #000000;
+    display: grid;
+    grid-template-rows: 15% 75%;
+    grid-row-gap: 5%;
+    border-radius: 23px;
+    padding: 4% 0;
+    box-sizing: border-box;
+    align-items: center;
+    box-shadow: 1.5vw 1vh 1.5vw rgba(180, 180, 180, 0.7);
+
+}
+.sidebar__logo{
+    margin-top: 2%;
+    margin-left: 35%;
+
+
+}
+.sidebar__logo a img{
+    max-width: 50%;
+
+}
+.sidebar-nav{
+    display: grid;
+    grid-template-rows: repeat(6 , 20%) ;
+    grid-row-gap: 15%;
+    justify-items: center;
+    justify-content: center;
+    align-content: space-around;
+
+}
+.sidebar__nav-link__exit{
+    margin-top: 6rem;
+}
+.sidebar__nav-link{
+
+    width: 100%;
+    margin-left: 60%;
+}
+.sidebar-nav a img{
+    width: 35%;
 }
 
+.main{
+    display: grid;
+    grid-template-columns: 52% 36%;
+    grid-column-gap: 4%;
+    max-height: 100vh;
+}
+.courses{
+    display: grid;
+    grid-template-rows: 23% 12% 63%;
+    max-height: 100vh;
+    gap: 1%;
 
+}
+.welcome-user{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #F5F5F7;
+    border-radius: 1.4rem;
+    position: relative;
+}
+.welcome-user__text{
+    display: grid;
+    grid-template-rows: 30% 30%;
+}
+.welcome-user__text h1{
+    font-family: 'Baloo Bhai 2';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+}
+.welcome-user__text p{
+
+}
+.welcome-user__img{
+    width: 40%;
+    position: absolute;
+    height: 12.3em;
+    right: 0.5em;
+    bottom: 0;
+}
+.welcome-user__img img{
+    width: 70%;
+}
+
+.slider__current-course{
+    display: grid;
+    grid-template-columns: 81% 18%;
+    gap: 1%;
+
+
+
+}
+
+.slider__current-course__first{
+    display: grid;
+    grid-template-columns: 15% 30% 10% 30%;
+    grid-column-gap: 2px;
+    gap: 5%;
+    background-color: #F5F5F7;
+    border-radius: 1rem;
+    height: 78%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+
+}
+.slider__current-course__first__icon{
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-height: 64px;
+    width: 64px;
+    margin-top: 0.6em;
+    margin-left: 0.6em;
+    text-align: center;
+
+}
+.slider__current-course__first__icon img{
+    width: 60%;
+    position: center;
+    margin-top: 20%;
+}
+.slider__current-course__first__text{
+    font-family: 'Baloo Bhai 2';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.4rem;
+    letter-spacing: 0;
+    text-align: left;
+}
+.slider__current-course__first__text h1{
+    font-size: 1.2rem;
+}
+.slider__current-course__first__text p{
+
+}
+.slider__current-course__first__progress p{
+    width: 50%;
+    margin-top: 32%;
+    font-size: 15px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 .slider__current-course__first__progress{
     background-image: url("../additional_files/img/progress.png");
-    background-size: ;
+    background-size: 100%;
     background-repeat: no-repeat;
+    margin-top: 30%;
+
 }
+
+.button-continue{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    width: 7.5rem;
+    height: 2.8rem;
+    background-color: #000000;
+    border-radius: 0.8rem;
+    margin: auto;
+}
+.slider__current-course_slider-control{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: start;
+    align-items: start;
+
+}
+.button__slider-control{
+    border-radius: 100%;
+    margin: auto;
+    justify-content: center;
+
+}
+.button__slider-control img{
+    width: 40px;
+    margin: auto;
+
+}
+
+.courses-list{
+    display: grid;
+    grid-template-areas: "topic"
+                          "list";
+    grid-template-rows: 15% 85%;
+    gap: 5%;
+}
+.courses-list__sorting ul{
+    display: grid;
+    width: 75%;
+    grid-template-columns: repeat(4, auto);
+    padding: 0;
+}
+.courses-list__current-list{
+    display: grid;
+    grid-template-rows: repeat(5, 80px);
+    gap:4%;
+    width: 100%;
+}
+
+.courses-list__current-list__item{
+    display: grid;
+    grid-template-columns: 10% 23% 14% 10% 22%;
+    gap: 3%;
+    background-color: #F5F5F7;
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+
+}
+
+.courses-list__current-list__item-img{
+    background: #FFFFFF;
+    border-radius: 12px;
+    height: 60px;
+    width: 64px;
+    text-align: center;
+    margin-top: 15%;
+}
+.courses-list__current-list__item-img img{
+     height: 32px;
+     position: center;
+     margin-top: 20%;
+ }
+.courses-list__current-list__item-icon img{
+    height: 16px;
+
+
+}
+.courses-list__current-list__item-icon {
+    margin-top:30px;
+}
+
+
+.button__course {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    width: 7.5rem;
+    height: 2.8rem;
+    background-color: #000000;
+    border-radius: 0.8rem;
+    margin-top: 12%;
+}
+
+/*Right part of main*/
+
+.user-statistic-coll{
+    display: grid;
+    grid-template-areas: "header"
+                         "course-statistic"
+                         "time-statistic"
+                         "offer";
+    grid-template-rows: 9% 11% 40% 22%;
+    gap: 4%;
+}
+.header{
+    display: grid;
+    grid-template-columns: 75% 8% 14%;
+    margin-top: 8%;
+    align-items: stretch;
+    justify-content: space-between;
+
+}
+.header__search input{
+
+    max-width: 300px;
+    width: 90%;
+    height: 40px;
+    background: url(../additional_files/img/search.png) no-repeat 5%,#f5f5f7;
+    background-size: 8%;
+    border: 0;
+    border-radius: 8px;
+    text-indent: 45px;
+}
+.header__notification{
+
+}
+.header__notification img{
+    height: 36px;
+}
+.header__avatar{
+    display: grid;
+    grid-template-columns: 70% 20%;
+}
+.header__avatar img:first-child{
+    width: 40px;
+    height: 40px;
+
+}
+.header__avatar img:nth-child(2){
+    width: 9px;
+    margin-top: 16px;
+
+
+}
+.user-course-statistic{
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 5%;
+}
+.user-course-statistic__completed{
+    display: grid;
+    grid-template-columns: 30% 30%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: #F5F5F7;
+    border-radius: 14px;
+}
+.user-course-statistic__completed span{
+    font-family: Baloo Bhai;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 80px;
+    color: #000000;
+}
+.user-course-statistic__completed p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.user-course-statistic__progress span{
+    font-family: 'Baloo Bhai 2';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 80px;
+    color: #000000;
+}
+.user-course-statistic__progress p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.user-course-statistic__progress{
+    display: grid;
+    grid-template-columns: 15% 35%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: #F5F5F7;
+    border-radius: 14px;
+}
+.user-time-statistic{
+    display: grid;
+    grid-template-rows: 10% 10% 70% ;
+    gap: 3%;
+}
+.user-time-statistic h2{
+    margin: 0;
+}
+.user-time-statistic__sorting{
+    display: grid;
+    grid-template-columns: 50% 1% 18% ;
+    gap: 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-time-statistic__sorting-type ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+}
+.user-time-statistic__sorting__time-type{
+    height: 32px;
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 0 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../additional_files/img/arrow-down.png) no-repeat 85%,#f5f5f7;
+    background-size: 10%;
+}
+.user-time-statistic__graph{
+
+}
+.user-time-statistic__graph img{
+    width: 108%;
+}
+
+.offer{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: space-around;
+    align-items: center;
+    background: #F5F5F7;
+    border-radius: 14px;
+}
+.offer-text{
+    margin: auto;
+    width: 70%;
+
+}
+.offer-button{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    width: 7.5rem;
+    height: 2.8rem;
+    background-color: #000000;
+    border-radius: 0.8rem;
+    margin: auto;
+}
+.offer__imag img{
+    width: 70%;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
