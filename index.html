@@ -35,12 +35,12 @@
             <a class="sidebar__nav-link" href="#">
                 <img src="additional_files/img/setting.png" alt="setting ">
             </a>
-            <a class="sidebar__nav-link" href="#">
+            <a class="sidebar__nav-link sidebar__nav-link__exit" href="#">
                 <img src="additional_files/img/exit.png" alt="exit ">
             </a>
         </nav>
     </aside>
-    <main>
+    <main class="main">
         <section class="courses">
             <div class="welcome-user">
                 <div class="welcome-user__text">
@@ -68,36 +68,40 @@
                     </button>
                 </div>
                 <div class="slider__current-course_slider-control" >
-                    <button class="button__slider-control">
+                    <a class="button__slider-control" href="#">
                         <img src="additional_files/img/left-arrow.png" alt="left arrow button ">
-                    </button>
-                    <button>
+                    </a>
+                    <a class="button__slider-control" href="#">
                         <img src="additional_files/img/right-arrow.png" alt="right arrow button">
-                    </button>
+                    </a>
                 </div>
             </div>
+
+
             <div class="courses-list">
+                <div class="courses-list__topic">
                 <h2>Courses</h2>
-                <div class="courses-list__sorting">
-                    <ul>
-                        <li><a href="">All Courses</a></li>
-                        <li><a href="">The Newest</a></li>
-                        <li><a href="">Top Rated</a></li>
-                        <li><a href="">Most Popular</a></li>
-                    </ul>
+                    <div class="courses-list__sorting">
+                        <ul>
+                            <li><a href="">All Courses</a></li>
+                            <li><a href="">The Newest</a></li>
+                            <li><a href="">Top Rated</a></li>
+                            <li><a href="">Most Popular</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="courses-list_current-list">
-                    <div>
-                        <div><img src="additional_files/img/figma.png" alt="figma logo"></div>
+                <div class="courses-list__current-list">
+                    <div class="courses-list__current-list__item">
+                        <div class="courses-list__current-list__item-img"><img src="additional_files/img/figma.png" alt="figma logo"></div>
                         <div>
                             <h4>Learn Figma</h4>
                             <p>by Christopher Morgan</p>
                         </div>
-                        <div>
+                        <div class="courses-list__current-list__item-icon">
                             <img src="additional_files/img/time.png" alt="time icon">
                             <span>6h 30min</span>
                         </div>
-                        <div>
+                        <div class="courses-list__current-list__item-icon">
                             <img src="additional_files/img/difficulty.png" alt="difficulty icon">
                             <span>4,9</span>
                         </div>
@@ -105,17 +109,17 @@
                             <span>View course</span>
                         </button>
                     </div>
-                    <div>
-                        <div><img src="additional_files/img/Photography.png" alt="Photography icon"></div>
+                    <div class="courses-list__current-list__item">
+                        <div class="courses-list__current-list__item-img"><img src="additional_files/img/Photography.png" alt="Photography icon"></div>
                         <div>
                             <h4>Analog photography</h4>
                             <p>by Gordon Norman</p>
                         </div>
-                        <div>
+                        <div class="courses-list__current-list__item-icon">
                             <img src="additional_files/img/time.png" alt="time icon">
                             <span>3h 15min</span>
                         </div>
-                        <div>
+                        <div class="courses-list__current-list__item-icon">
                             <img src="additional_files/img/difficulty.png" alt="difficulty icon">
                             <span>4,7</span>
                         </div>
@@ -123,17 +127,17 @@
                             <span>View course</span>
                         </button>
                     </div>
-                    <div>
-                        <div><img src="additional_files/img/instagram.png" alt=""></div>
+                    <div class="courses-list__current-list__item">
+                        <div class="courses-list__current-list__item-img"><img src="additional_files/img/instagram.png" alt=""></div>
                         <div>
                             <h4>Master Instagram</h4>
                             <p>by Sophie Gill</p>
                         </div>
-                        <div>
+                        <div class="courses-list__current-list__item-icon">
                             <img src="additional_files/img/time.png" alt="time icon">
                             <span>7h 40min</span>
                         </div>
-                        <div>
+                        <div class="courses-list__current-list__item-icon">
                             <img src="additional_files/img/difficulty.png" alt="difficulty icon">
                             <span>4,6</span>
                         </div>
@@ -141,17 +145,17 @@
                             <span>View course</span>
                         </button>
                     </div>
-                    <div>
-                        <div><img src="additional_files/img/drawing.png" alt=""></div>
+                    <div class="courses-list__current-list__item">
+                        <div class="courses-list__current-list__item-img"><img src="additional_files/img/drawing.png" alt=""></div>
                         <div>
                             <h4>Basics of drawing</h4>
                             <p>by Jean Tate</p>
                         </div>
-                        <div>
+                        <div class="courses-list__current-list__item-icon">
                             <img src="additional_files/img/time.png" alt="time icon">
                             <span>11h 30min</span>
                         </div>
-                        <div>
+                        <div class="courses-list__current-list__item-icon">
                             <img src="additional_files/img/difficulty.png" alt="difficulty icon">
                             <span>4,8</span>
                         </div>
@@ -159,17 +163,17 @@
                             <span>View course</span>
                         </button>
                     </div>
-                    <div>
-                        <div><img src="additional_files/img/photoshop.png" alt=""></div>
+                    <div class="courses-list__current-list__item">
+                        <div class="courses-list__current-list__item-img"><img src="additional_files/img/photoshop.png" alt=""></div>
                         <div>
                             <h4>Photoshop - Essence</h4>
                             <p>by David Green</p>
                         </div>
-                        <div>
+                        <div class="courses-list__current-list__item-icon">
                             <img src="additional_files/img/time.png" alt="time icon">
                             <span>5h 35min</span>
                         </div>
-                        <div>
+                        <div class="courses-list__current-list__item-icon">
                             <img src="additional_files/img/difficulty.png" alt="difficulty icon">
                             <span>4,7</span>
                         </div>
@@ -183,23 +187,26 @@
         <section class="user-statistic-coll">
             <div class="header">
                 <div class="header__search">
-                    <input type="search"> 
+                    <label>
+                        <input type="search">
+                    </label>
                 </div>
                 <div class="header__notification">
                     <img src="additional_files/img/Notification.png" alt="notification imag">
                 </div>
                 <div class="header__avatar">
                     <img src="additional_files/img/profileimg.png" alt="user avatar">
+                    <img src="additional_files/img/arrow-down.png" alt="arrow down">
                 </div>
             </div>
             <div class="user-course-statistic">
                 <div class="user-course-statistic__completed">
                     <span>11</span>
-                    <span>Courses completed</span>
+                    <p>Courses completed</p>
                 </div>
                 <div class="user-course-statistic__progress">
                     <span>4</span>
-                    <span>Courses in progress</span>
+                    <p>Courses <br> in  progress</p>
                 </div>
             </div>
             <div class="user-time-statistic">
@@ -211,6 +218,7 @@
                             <li><a href="">My Courses</a></li>
                         </ul>
                     </div>
+                    <label for="time-type"></label>
                     <select name="time-type" id="time-type" class="user-time-statistic__sorting__time-type">
                         <option value="day">Day</option>
                         <option value="week" selected >Week</option>
@@ -219,7 +227,7 @@
                         <option value="all time">All time</option>
                     </select>
                 </div>
-                <div>
+                <div class="user-time-statistic__graph">
                     <img src="additional_files/img/statistic.png" alt="user statistic">
                 </div>
             </div>
