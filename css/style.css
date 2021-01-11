@@ -406,12 +406,14 @@ li:hover{
 .courses-list__current-list__item-icon img{
     height: 16px;
     align-self: center;
+    margin: 5px;
 
 
 }
 .courses-list__current-list__item-icon {
-    margin-top:30px;
-    margin-right: 3px;
+
+    display: flex;
+    align-items: center;
     box-sizing: border-box;
 }
 
