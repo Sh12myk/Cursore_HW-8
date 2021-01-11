@@ -38,6 +38,10 @@ li a{
     opacity: 0.3;
     text-decoration: none;
 }
+li:hover{
+    transform: scale(1.1) ;
+    margin-left: 5px;
+}
 .courses-list__sorting-checked{
     opacity: 1;
 }
@@ -51,7 +55,7 @@ li a{
     gap: 3%;
     justify-content: space-around;
     height: 98vh;
-    position: sticky;
+    min-height: 900px;
 
 
 }
@@ -67,6 +71,7 @@ li a{
     box-shadow: 1.5vw 1vh 1.5vw rgba(180, 180, 180, 0.7);
     margin-top: 14%;
     margin-left: 32px;
+    position: relative;
 
 
 }
@@ -128,13 +133,16 @@ li a{
     grid-template-columns: 52% 36%;
     grid-column-gap: 4%;
     max-height: 100vh;
+    min-height: 900px;
     overflow: hidden;
 }
 .courses{
     display: grid;
     grid-template-rows: 23% 12% 63%;
     max-height: 100vh;
+    min-height: 900px;
     gap: 1%;
+
 
 }
 .welcome-user{
@@ -144,6 +152,7 @@ li a{
     background-color: #F5F5F7;
     border-radius: 1.4rem;
     position: relative;
+
 }
 .welcome-user__text{
     width: 70%;
@@ -186,6 +195,7 @@ li a{
     display: grid;
     grid-template-columns: 81% 18%;
     gap: 1%;
+    position: relative;
 }
 
 .slider__current-course__first{
@@ -304,10 +314,11 @@ li a{
     border-radius: 100%;
     margin: auto;
     justify-content: center;
+    box-sizing: border-box;
 
 }
 .slider__current-course_slider-control a:hover{
-    transform: scale(1);
+    transform: scale(1.2);
 
 }
 .slider__current-course_slider-control a:active{
@@ -328,6 +339,7 @@ li a{
                           "list";
     grid-template-rows: 15% 85%;
     gap: 5%;
+    position: relative;
 }
 .courses-list__sorting ul{
     display: grid;
@@ -337,9 +349,10 @@ li a{
 }
 .courses-list__current-list{
     display: grid;
-    grid-template-rows: repeat(5, 80px);
+    grid-template-rows: repeat(5, auto);
     gap:4%;
     width: 100%;
+    position: relative;
 }
 
 .courses-list__current-list__item{
@@ -352,9 +365,10 @@ li a{
     width: 100%;
     justify-content: space-around;
 
+
 }
 .courses-list__current-list__item-text{
-    line-height: 1px;
+    line-height: 10px;
     margin-top: 8px;;
 }
 .courses-list__current-list__item-text p{
@@ -387,17 +401,18 @@ li a{
 }
 .courses-list__current-list__item-img img{
      height: 32px;
-     position: center;
      margin-top: 20%;
  }
 .courses-list__current-list__item-icon img{
     height: 16px;
+    align-self: center;
 
 
 }
 .courses-list__current-list__item-icon {
     margin-top:30px;
     margin-right: 3px;
+    box-sizing: border-box;
 }
 
 
@@ -644,12 +659,14 @@ li a{
     gap: 4%;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
 }
 .user-time-statistic__sorting-type ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 0;
+    position: relative;
 
 }
 select{
@@ -674,6 +691,8 @@ select{
 
 .user-time-statistic__graph img{
     width: 108%;
+    position: relative;
+
 }
 
 .offer{
@@ -1300,17 +1319,11 @@ body {
 }
 
 @media only screen and (min-width: 1450px) {
-body {
-    max-height: 1200px;
-    max-width: 1900px;
-
-}
-
 .container {
     display: grid;
     grid-template-areas: "aside main";
-    grid-template-columns: minmax(150px, 23%) minmax(83%, auto);
-    gap: 10%;
+    grid-template-columns: minmax(100px, 10%) minmax(80%, auto);
+    gap: 5%;
     justify-content: space-around;
     margin: 2%;
 }
@@ -1327,10 +1340,10 @@ body {
 
 .main {
     display: grid;
-    grid-template-columns: 52% 40%;
-    grid-column-gap: 8%;
+    grid-template-columns: 53% 40%;
+    grid-column-gap: 6%;
     max-height: 100vh;
-    overflow: auto;
+
 }
 
 .courses {
